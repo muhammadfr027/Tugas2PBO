@@ -1,24 +1,17 @@
 import java.util.Scanner;
 
-public class Main {
-  public static void main(String[] args) {
-    Scanner scanner = new Scanner(System.in);
+public class TimeConverter {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Masukan detik : ");
+        int totalDetik = scanner.nextInt();
 
-    System.out.print("imput nim anda: ");
-    String nim = scanner.nextLine();
+        int Detik = totalDetik % 60;
+        int totalMenit = totalDetik / 60;
+        int Menit = totalMenit % 60;
+        int totalJam = totalMenit / 60;
+        int Jam = totalJam % 24;
 
-    System.out.print("Mohon masukan nama anda: ");
-    String nama = scanner.nextLine();
-
-    System.out.print("Mohon masukan jurusan anda: ");
-    String jurusan = scanner.nextLine();
-
-    System.out.print("Mohon masukan fakultas anda: ");
-    String fakultas = scanner.nextLine();
-
-    System.out.println("\nNim: " + nim);
-    System.out.println("Nama: " + nama);
-    System.out.println("Jurusan: " + jurusan);
-    System.out.println("Fakultas: " + fakultas);
-  } 
+        System.out.println("Hasil : " + Jam + ":" + Menit + ":" + Detik);
+    }
 }
